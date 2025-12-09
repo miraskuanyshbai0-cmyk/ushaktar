@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ұшақтар тарихы</title>
+  <link rel="stylesheet" href="link.css">
+
+  <style>
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      margin: 0;
+      padding: 0;
+      background: #f8f8f8;
+      color: #222;
+      cursor: default; 
+    }
+
+    header {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding: 12px 20px;
+      background:#0a3b66;
+      color:#fff;
+    }
+
+    .logo { font-weight:700; font-size:1.1rem; }
+
+    nav a {
+      margin-left:14px;
+      color:#fff;
+      text-decoration:none;
+      transition:opacity .15s, transform .12s;
+      cursor: pointer; 
+    }
+    nav a:hover { opacity:0.9; transform: translateY(-2px); }
+
+    .hero {
+      padding:40px 20px;
+      background:linear-gradient(180deg,#0d6efd22,#ffffff00);
+      text-align:center;
+    }
+
+    section.content, .gallery, .media, .contact {
+      padding:20px;
+      max-width:1100px;
+      margin: 0 auto 30px;
+      background:#fff;
+      border-radius:6px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+    }
+
+    table { width:100%; border-collapse:collapse; margin-top:10px; }
+    th, td { padding:8px 6px; border:1px solid #e6e6e6; text-align:left; }
+
+    /* Галерея стилі */
+    .gallery-grid {
+      display:flex;
+      flex-wrap:wrap;
+      gap:22px;
+      justify-content:center;
+    }
+    .card {
+      width:240px;
+      background:#ffffff;
+      border-radius:10px;
+      padding:10px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.10);
+      transition:transform .18s, box-shadow .18s;
+      position:relative;
+      overflow:hidden;
+    }
+    .card:hover {
+      transform:translateY(-6px) scale(1.03);
+      box-shadow:0 12px 30px rgba(0,0,0,0.16);
+    }
+    .card img {
+      width:100%;
+      height:150px;
+      object-fit:cover;
+      border-radius:6px;
+      display:block;
+    }
+    .card h3 { margin:10px 0 6px; font-size:16px; }
+    .card p { font-size:14px; margin:0; color:#333; }
+    .badge {
+      position:absolute;
+      top:10px;
+      left:10px;
+      background:rgba(10,59,102,0.95);
+      color:#fff;
+      font-weight:700;
+      width:30px;
+      height:30px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:50%;
+      box-shadow:0 2px 6px rgba(0,0,0,0.2);
+      font-size:14px;
+    }
+
+    button {
+      background:#0a3b66;
+      color:#fff;
+      border:none;
+      padding:10px 14px;
+      border-radius:5px;
+      cursor: pointer; 
+      transition: background .12s, transform .08s;
+    }
+    button:hover { background:#08304f; transform: translateY(-1px); }
+
+    
+    .responsive-iframe-wrap {
+      width:100%;
+      max-width:900px;
+      margin:0 auto 18px;
+    }
+    .responsive-iframe-wrap .frame {
+      position:relative;
+      padding-bottom:56.25%;
+      height:0;
+      overflow:hidden;
+      border:1px solid #ddd;
+      border-radius:6px;
+    }
+    .responsive-iframe-wrap iframe {
+      position:absolute;
+      top:0; left:0;
+      width:100%; height:100%;
+      border:0;
+      transition: box-shadow .12s;
+      cursor: grab;
+    }
+    .responsive-iframe-wrap iframe:active { cursor: grabbing; }
+
+    .wiki-frame { margin-top:12px; border-radius:6px; overflow:hidden; }
+
+    @media (max-width:640px) {
+      .gallery img { width:48%; height:120px; }
+      .card { width:48%; }
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">✈ Ұшақтар</div>
+  <nav>
+    <a href="#basty">Басты бет</a>
+    <a href="#tarikh">Тарих</a>
+    <a href="#galereya">Суреттер</a>
+    <a href="#video">Видео / Аудио</a>
+    <a href="#baylanys">Кері байланыс</a>
+  </nav>
+</header>
+
+<section id="basty" class="hero">
+  <h1>Бұл жерде ұшақтар туралы білуге болады</h1>
+  <p>Аспандағы адам арманы — инженерия мен технологияның жетістігі</p>
+</section>
+
+<marquee behavior="" direction="" scrollamount="10" style="color:yellow">
+  Бұл жерде қысқаша ұшақ тарихы
+</marquee>
+
+<section id="tarikh" class="content">
+  <h2>Ұшақ тарихындағы маңызды оқиғалар</h2>
+  <table>
+    <tr><th>Жылы</th><th>Оқиға</th><th>Маңызы</th></tr>
+    <tr><td>1783</td><td>Монгольфье ағайындылары</td><td>Алғашқы ауа шары</td></tr>
+    <tr><td>1891–1896</td><td>Отто Лилиенталь</td><td>Планер ұшу тәжірибелері</td></tr>
+    <tr><td>1903</td><td>Райт ағайындылары</td><td>Алғаш моторлы ұшақ</td></tr>
+    <tr><td>1914–1918</td><td>1-дүниежүзілік соғыс</td><td>Әскери авиация дамуы</td></tr>
+    <tr><td>1950–қазір</td><td>Jet дәуірі</td><td>Супержылдам ұшақтар дәуірі</td></tr>
+  </table>
+</section>
+
+<marquee behavior="" direction="" scrollamount="10" style="color:rgb(255, 0, 25)">
+  Бұл жерде суреттер
+</marquee>
+
+<!-- ====== Галерея (жаңартылған) ====== -->
+<section id="galereya" class="gallery">
+  <h2 style="text-align:center; margin-bottom:20px;">Ұшақтар галереясы</h2>
+
+  <div class="gallery-grid">
+
+    <!-- 1 -->
+    <div class="card" role="group" aria-label="Wright Flyer">
+      <span class="badge">1</span>
+      <img src="wrt.jpg" alt="Wright Flyer">
+      <h3>Wright Flyer (1903)</h3>
+      <p><strong>Маңызы:</strong> Адам жасаған алғашқы басқарылатын моторлы ұшақ.<br><strong>Қызық факт:</strong> Бұл ұшу небәрі ~12 секундқа созылған.</p>
+    </div>
+
+    <!-- 2 -->
+    <div class="card" role="group" aria-label="Douglas DC-3">
+      <span class="badge">2</span>
+      <img src="p8.jpg.webp" alt="Douglas DC-3">
+      <h3>Douglas DC-3 (1935)</h3>
+      <p><strong>Маңызы:</strong> Коммерциялық авиацияны өзгерткен сенімді лайнер.<br><strong>Қызық факт:</strong> Кейбір DC-3 модельдері әлі де пайдаланылып жүр.</p>
+    </div>
+
+    <!-- 3 -->
+    <div class="card" role="group" aria-label="Boeing 747">
+      <span class="badge">3</span>
+      <img src="boeing.jpg" alt="Boeing 747">
+      <h3>Boeing 747 "Jumbo Jet"</h3>
+      <p><strong>Маңызы:</strong> Үлкен жолаушыларды ұзақ маршрутып тасымалдауға арналған.<br><strong>Қызық факт:</strong> 1970-ші жылдан бері халықаралық тасымалдауда төңкеріс жасады.</p>
+    </div>
+
+    <!-- 4 -->
+    <div class="card" role="group" aria-label="Airbus A350">
+      <span class="badge">4</span>
+      <img src="airbus.jpg" alt="Airbus A350">
+      <h3>Airbus A350</h3>
+      <p><strong>Маңызы:</strong> Жаңа буын жанармай үнемдейтін лайнер.<br><strong>Қызық факт:</strong> Фюзеляжының көп бөлігі композиттен жасалған, бұл салмақты азайтады.</p>
+    </div>
+
+  </div>
+</section>
+<!-- ====== Галерея аяқталды ====== -->
+
+<section id="video" class="media">
+  <h2>Видео және Аудио материалдар</h2>
+
+  <div class="video-container">
+    <iframe width="560" height="315"
+      src="https://www.youtube.com/embed/OxBA3-qysuI?si=TLkM2hgwm3eIdDVJ"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
+
+  <div class="audio-container">
+    <h3>✈ Ұшақ қозғалтқышының дыбысы</h3>
+    <audio controls>
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+      Браузеріңіз аудионы қолдамайды.
+    </audio>
+  </div>
+
+  <div class="wiki-frame responsive-iframe-wrap" style="max-width:1100px;">
+    <div class="frame">
+      <iframe src="https://kk.wikipedia.org/wiki/%D2%B0%D1%88%D0%B0%D2%9B" title="Wikipedia - Ұшақ" loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<div class="responsive-iframe-wrap" aria-label="Almaty International Airport Map">
+  <div class="frame">
+    <iframe
+      src="https://www.google.com/maps?q=43.3512,77.0377&z=15&output=embed"
+      title="Almaty International Airport (ALA) - Map"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</div>
+
+<section id="baylanys" class="contact">
+  <h2>Кері байланыс</h2>
+  <p>Төмендегі форма арқылы өз ойыңызды жазыңыз:</p>
+
+  <form onsubmit="return sendForm(event)">
+    <label>Аты-жөніңіз:</label>
+    <input type="text" id="name" required placeholder="Атыңызды енгізіңіз">
+
+    <label>Email:</label>
+    <input type="email" id="email" required placeholder="example@gmail.com">
+
+    <label>Хабарлама:</label>
+    <textarea id="message" rows="4" placeholder="Сіздің пікіріңіз..."></textarea>
+
+    <button type="submit">Жіберу</button>
+  </form>
+  <div id="feedback" style="margin-top:10px;font-weight:600"></div>
+</section>
+
+<footer style="text-align:center;padding:18px 10px;">
+  <p>© 2025 | Ұшақ тарихы сайты | жобa</p>
+</footer>
+
+<script>
+// Сайт ашылғанда alert шығару
+window.onload = function() {
+  alert("✈ Сайтқа қош келдіңіз!");
+};
+
+function sendForm(e) {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const msg = document.getElementById("message").value.trim();
+  const fb = document.getElementById("feedback");
+
+  if (!name || !email || !msg) {
+    alert("Барлық жолдарды толтырыңыз!");
+    fb.textContent = "Барлық жолдарды толтырыңыз!";
+    fb.style.color = "red";
+    return;
+  }
+
+  // Confirm терезесі
+  const sure = confirm("Пікірді жібергіңіз келе ме?");
+  
+  if (sure) {
+    alert("Рақмет! Пікіріңіз жіберілді ✔");
+
+    fb.textContent = "Рақмет! Пікіріңіз қабылданды.";
+    fb.style.color = "green";
+    e.target.reset();
+
+  } else {
+    alert("Жіберу тоқтатылды ❌");
+    fb.textContent = "Пікір жіберілген жоқ.";
+    fb.style.color = "orange";
+  }
+}
+</script>
+
+</body>
+</html>
